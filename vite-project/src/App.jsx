@@ -12,23 +12,22 @@ function App() {
   }
   alert("Hiiiiiii")
   console.log('My name is ',details.name)
-  function training(){
-    console.log("Welcome to react");
+  function practice(){
+    console.log("Practice makes a man perfect");
   }
-  const fullstack=()=>{
+  const fullstack =()=>{
     console.log("Welcome to fullstack");
   }
-
-
-  return (
+return (
     <>
-      <h2 style={{textAlign:"center"}}>Inline css</h2>
-      <h1 style={{textAlign:"center",color:"crimson"}}>RAJALAKSHMI</h1><br></br>
-      <h2 style={{textAlign:'center'}}>External css</h2>
-      <p className='info'>Name : {details.name}</p>
-      <button onclick={training}>Training</button>
-      <button onClick={fullstack}>Fullstack</button>
-      <button onClick={()=>console.log("student")}>Student</button>
+  <h1 style={{textAlign:"center",color:"black"}}>Inline css</h1>
+  <h2 style={{textAlign: "center",color:"crimson"}}>RAJALAKSHMI</h2>
+  <h1 style={{textAlign: "center",color:"black"}}>External css</h1>
+  <p className='info'>Name : {details.name}</p>
+  <button onClick={practice}> react</button>
+  <button onClick={fullstack}>click</button>
+  <button onClick={()=>console.log("student")}>Student</button>
+
     
     </>
   )
