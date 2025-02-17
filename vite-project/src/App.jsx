@@ -27,6 +27,7 @@ return (
       <Comp1 name2={info2.name2} age2={info2.age2}/>
     </div>
     <h1 style={{textAlign:"center",color:"black"}}>My SECID is {info.SecId}</h1>
+    <h1 style={{textAlign:"center",color:"black"}}>My  friend's SECID is {info2.SecId}</h1>
     <button onClick={()=>alert("On click is clicked")}>click</button><br></br>
     <button onDoubleClick={()=>alert("On click is Double clicked")}>Double click</button>
   
