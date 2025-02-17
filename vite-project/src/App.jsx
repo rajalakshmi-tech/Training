@@ -1,33 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import React from 'react'
 import './App.css'
+import Comp1 from './Comp1'
 
 function App() {
-  let name="RAJALAKSHMI R"
-  const details={
-    name:"RAJALAKSHMI",
-    age:20,
-    roll:18
+  const info={
+    name:"Rajalakshmi",
+    dept:"M.Tech cse",
+    SecId:"Sec23cj001",
+    age:19,
   }
-  alert("Hiiiiiii")
-  console.log('My name is ',details.name)
-  function practice(){
-    console.log("Practice makes a man perfect");
+  const info2={
+    name2:"Ponvedica",
+    dept:"cse",
+    SecId:"Sec23cj002",
+    age2:20,
   }
-  const fullstack =()=>{
-    console.log("Welcome to fullstack");
-  }
-return (
-    <>
-  <h1 style={{textAlign:"center",color:"black"}}>Inline css</h1>
-  <h2 style={{textAlign: "center",color:"crimson"}}>RAJALAKSHMI</h2>
-  <h1 style={{textAlign: "center",color:"black"}}>External css</h1>
-  <p className='info'>Name : {details.name}</p>
-  <button onClick={practice}> react</button>
-  <button onClick={fullstack}>click</button>
-  <button onClick={()=>console.log("student")}>Student</button>
+  
 
+return (
+
+    <>
+    <h1 style={{textAlign:"center",color:"black"}}>Friends Forever</h1>
+    <div>
+      <Comp1  name={info.name} age={info.age}/>
+      <Comp1 name2={info2.name2} age2={info2.age2}/>
+    </div>
+    <h1 style={{textAlign:"center",color:"black"}}>My SECID is {info.SecId}</h1>
+    <button onClick={()=>alert("On click is clicked")}>click</button><br></br>
+    <button onDoubleClick={()=>alert("On click is Double clicked")}>Double click</button>
+  
+  
     
     </>
   )
