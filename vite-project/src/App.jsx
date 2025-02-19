@@ -27,11 +27,9 @@ function App() {
   <>
     <div className={isDarkMode ? "dark-theme" : "light-theme"}>
       <div className="content">
-        <h1 style={{ textAlign: "center", color: isDarkMode ? "#F9F6E6" : "darkred" }}>
-          Friends Forever 
+        <h1 style={{ textAlign: "center"}}>
+          Friends Forever :)
         </h1>
-
-        <br />
       <div>
       <Comp1  name={info.name} age={info.age}  
       name2={info2.name2} age2={info2.age2}/>
