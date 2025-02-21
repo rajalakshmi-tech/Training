@@ -1,48 +1,33 @@
 
 import React from 'react'
 import './App.css'
-import Comp1 from './Comp1'
 import {useState} from 'react';
-
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(0);
-  const changeTheme = () => {
-        setIsDarkMode((prevMode) => !prevMode);
-      };
   
-  const info={
-    name:"Rajalakshmi",
-    dept:"M.Tech cse",
-    SecId:"Sec23cj001",
-    age:19,
+  const [name,setName]=useState("");
+  const[dept,setDept]=useState("");
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(name);
+    console.log(dept);
   }
-  const info2={
-    name2:"Ponvedica",
-    dept:"cse",
-    SecId:"Sec23cj002",
-    age2:20,
-  }
-  
-  return (
+return (
   <>
-    <div className={isDarkMode ? "dark-theme" : "light-theme"}>
-      <div className="content">
-        <h1 style={{ textAlign: "center"}}>
-          Friends Forever :)
-        </h1>
-      <div>
-      <Comp1  name={info.name} age={info.age}  
-      name2={info2.name2} age2={info2.age2}/>
-      </div>
-      <h1 style={{textAlign:"center"}}>My SECID is {info.SecId}</h1>
-      <h1 style={{textAlign:"center"}}>My  friend's SECID is {info2.SecId}</h1>
-      <button onClick={()=>alert("On click is clicked")}>click</button><br></br>
-      <button onDoubleClick={()=>alert("On click is Double clicked")}>Double click</button> <br></br>
-      <button className="toggle-button" onClick={changeTheme}>
-          {isDarkMode ? "Light Mode" : "Dark Mode"}</button>
-      </div>
-    </div>
+   <div>
+    <form className='form' onSubmit={handleSubmit}>
+      <h1>Registration Form</h1>
+      <input className='input' type="text" required value={name}placeholder="Enter your Name" onChange={(e)=>setName(e.target.value)}/>
+      <input className='input' type="text" required value={dept} placeholder='Enter your Department' onChange={(e)=>setDept(e.target.value)}/>
+      <input className='email' type="email" required placeholder='Enter your Email'/>
+      <input className='password' type="password" required placeholder='Enter your Password'/>
+      <input calssName='DOB' type="Date" required placeholder='Enter your date'/>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
 
+    </form>
+   </div>
+ 
+    
   </>
   );
 };
