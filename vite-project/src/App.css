@@ -3,6 +3,9 @@
     border-radius: 10px;
     border-color:#D69ADE;
     font-family:cursive;
+    font-style: italic;
+    
+
 }
 .form{
      display: flex; 
@@ -12,6 +15,22 @@
     margin-top: 20px;
     gap: 10px;  
 }
+.feedback{
+    color:darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    
+}
+.home{
+    color:darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+
+
 
 
 

@@ -2,6 +2,10 @@
 import React from 'react'
 import './App.css'
 import {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Feedback from "./Feedback";
+
 function App() {
   
   const [name,setName]=useState("");
@@ -26,6 +30,12 @@ return (
 
     </form>
    </div>
+   <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/feedback" element={<Feedback />} />
+      </Routes>
+    </Router>
  
     
   </>
